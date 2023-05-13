@@ -5,10 +5,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Steve's Calculator</title>
 </head>
 <body>
-    
+    <div id="wrapper">
+
+        <h1>Server Side Calculator</h1>
+
+        <div id="calcDiv">
+            <form onsubmit="doMath(event)">
+                <input id="num1" type="number" placeholder="0">
+                <button type="button" onclick="passPlus()">+</button>
+                <button type="button" onclick="passMinus()">-</button>
+                <button type="button" onclick="passMultiply()">*</button>
+                <button type="button" onclick="passDivide()">/</button>
+                <input id="num2" type="number" placeholder="0">
+                <button type="submit">=</button>
+                <button>C</button>
+            </form>
+        </div>
+
+        <div id="outputDiv">
+
+        </div>
+
+        <div id="memoryDiv">
+
+        </div>
+
+    </div>
     <script src="../server.js"></script>
 </body>
 </html>
