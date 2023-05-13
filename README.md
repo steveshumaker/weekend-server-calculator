@@ -13,7 +13,9 @@ TODO:
 create the UI [x]
 install the server [x]
 build the calculator code [x]
-post the new calculation []
-figure out if the calculations are in the right place []
-figure out how to get the calculations []
-figure out displying the calculations to the DOM []
+post the new calculation [x]
+figure out if the calculations are in the right place [x]
+figure out how to get the calculations [x]
+figure out displying the calculations to the DOM [x]
+figure out how to persist the page thru refresh []
+
