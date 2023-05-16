@@ -3,31 +3,33 @@
 // imports and declarations
 let operation = '';
 let sign = '';
-let eval = '';
+
+getCalcs();
 
 
-
-// calculator function / POST
+// 'equal' onclick - add a calculation / POST
 function doMath(event) {
-    console.log('in doMath', operation);
     event.preventDefault();
 
+    // get the values from the user
     let num1 = Number(document.getElementById('num1').value);
     let num2 = Number(document.getElementById('num2').value);
 
-
+    // add the values to an object to send to the server
     let calcToAdd = JSON.stringify({
         num1: num1,
         operation: operation,
         num2: num2,
     });
 
+    // send the object to the server
     fetch('/calcs', {method: 'POST', body: calcToAdd, headers: { 'Content-Type': 'application/json' }})
+    // once a response is received, clear the history and call the getCalcs function
     .then((response) => {
         document.querySelector('#memoryDiv').innerHTML = '';
         getCalcs();
-
     })
+    // catch errors
     .catch((error) => {
         console.log('Error: ', error);
         alert('Error!');
@@ -65,14 +67,18 @@ function clearFields() {
 function getCalcs() {
     fetch('/calcs')
     .then((response) => {
+        // convert the response object to json
         return response.json();
     })
     .then((calcs) => {
+        // iterate over the returned json to update the history
         let calcDiv = document.getElementById('memoryDiv');
         let outputEl = document.getElementById('output');
 
+        // update the current calculation result with the result of the last calculation posted
         outputEl.innerHTML = `<h2>${calcs[calcs.length-1].eval}</h2>`;
 
+        // update the history for each calculation by the user
         for (let calc of calcs) {
             calcDiv.innerHTML += `<p>${calc.num1} ${calc.sign} ${calc.num2} = ${calc.eval}</p>`;
         }
