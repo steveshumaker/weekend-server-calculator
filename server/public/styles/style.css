@@ -1,0 +1,23 @@
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 10rem;
+    padding: 2px;
+    margin: 2px;
+
+}
+
+/* #seven {
+    grid-column-start: left-bound;
+    grid-column-end: right-one;
+    grid-row-start: top-bound;
+    grid-row-end: down-one;
+}
+
+#eight {
+    grid-column-start: right-one;
+    grid-column-end: right-two;
+    grid-row-start: top-bound;
+    grid-row-end: down-one;
+} */
