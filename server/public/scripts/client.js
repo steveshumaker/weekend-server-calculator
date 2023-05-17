@@ -6,7 +6,6 @@ let sign = '';
 
 getCalcs();
 
-
 // 'equal' onclick - add a calculation / POST
 function doMath(event) {
     event.preventDefault();
@@ -33,10 +32,10 @@ function doMath(event) {
     .catch((error) => {
         console.log('Error: ', error);
         alert('Error!');
-    });
-
-    
+    });   
 }
+
+
 
 // math operation functions
 function passPlus() {
@@ -79,11 +78,17 @@ function getCalcs() {
         outputEl.innerHTML = `<h2>${calcs[calcs.length-1].eval}</h2>`;
 
         // update the history for each calculation by the user
-        for (let calc of calcs) {
-            calcDiv.innerHTML += `<p>${calc.num1} ${calc.sign} ${calc.num2} = ${calc.eval}</p>`;
+        // for (let calc of calcs) {
+        //     calcDiv.innerHTML += `<p>${calc.num1} ${calc.sign} ${calc.num2} = ${calc.eval}</p>`;
+        // }
+        console.log(calcs);
+        for (let i = 1; i < calcs.length; i++) {
+            calcDiv.innerHTML += `<p>${calcs[i].num1} ${calcs[i].sign} ${calcs[i].num2} = ${calcs[i].eval}</p>`;
         }
+
     }).catch((error) => {
-        console.log(error);
+        console.log('getCalcs error:', error);
         alert('Error!');
     });
 }
+
