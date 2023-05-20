@@ -40,7 +40,7 @@ app.post('/calcs', (req, res) => {
         dataFromClient.eval = num1 / num2;
         dataFromClient.sign = '/';
     }
-
+    // push the calculation object
     calcArray.push(dataFromClient);
     res.sendStatus(201);
 })
