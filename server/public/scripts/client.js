@@ -92,3 +92,8 @@ function getCalcs() {
     });
 }
 
+const button = document.getElementById('seven');
+
+button.addEventListener('click', function() {
+    console.log(button.value);
+});
