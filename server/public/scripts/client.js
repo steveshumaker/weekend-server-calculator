@@ -78,9 +78,6 @@ function getCalcs() {
         outputEl.innerHTML = `<h2>${calcs[calcs.length-1].eval}</h2>`;
 
         // update the history for each calculation by the user
-        // for (let calc of calcs) {
-        //     calcDiv.innerHTML += `<p>${calc.num1} ${calc.sign} ${calc.num2} = ${calc.eval}</p>`;
-        // }
         console.log(calcs);
         for (let i = 1; i < calcs.length; i++) {
             calcDiv.innerHTML += `<p>${calcs[i].num1} ${calcs[i].sign} ${calcs[i].num2} = ${calcs[i].eval}</p>`;
