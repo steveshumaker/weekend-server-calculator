@@ -89,8 +89,11 @@ function getCalcs() {
     });
 }
 
-const button = document.getElementById('seven');
+// event listener for buttons
+const buttons = document.querySelectorAll('.numberButton');
 
-button.addEventListener('click', function() {
-    console.log(button.value);
+buttons.forEach(button => {
+    button.addEventListener('click', event => {
+        console.log(event.target.id);
+    });
 });
