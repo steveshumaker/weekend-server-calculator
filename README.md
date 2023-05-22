@@ -10,6 +10,8 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 
 TODO:
 
+--- BASE ---
+
 create the UI [x]
 install the server [x]
 build the calculator code [x]
@@ -17,5 +19,9 @@ post the new calculation [x]
 figure out if the calculations are in the right place [x]
 figure out how to get the calculations [x]
 figure out displying the calculations to the DOM [x]
-figure out how to persist the page thru refresh []
+figure out how to persist the page thru refresh [x]
 
+--- STRETCH ---
+
+update the UI to a calculator []
+- have a fb built to work on this
