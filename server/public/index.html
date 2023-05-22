@@ -13,35 +13,25 @@
         <h1>Server Side Calculator</h1>
 
         <div id="calcDiv">
-            <!-- <form onsubmit="doMath(event)">
-                <input id="num1" type="number" placeholder="0">
-                <button type="button" onclick="passPlus()">+</button>
-                <button type="button" onclick="passMinus()">-</button>
-                <button type="button" onclick="passMultiply()">*</button>
-                <button type="button" onclick="passDivide()">/</button>
-                <input id="num2" type="number" placeholder="0">
-                <button type="submit">=</button>
-                <button type="button" onclick="clearFields()">C</button>
-            </form> -->
             <input type="text">
-            <button class="numberButton" id="clear">C</button>
+            <button class="numberButton" id="clear" onclick="doMath(event)">C</button>
             <div class="grid-wrapper">
                 <button class="numberButton" id="8">8</button>
                 <button class="numberButton" id="7">7</button>
                 <button class="numberButton" id="9">9</button>
-                <button class="numberButton" id="+">+</button>
+                <button class="numberButton" id="+" onclick="passPlus()">+</button>
                 <button class="numberButton" id="four">4</button>
                 <button class="numberButton" id="5">5</button>
                 <button class="numberButton" id="6">6</button>
-                <button class="numberButton" id="-">-</button>
+                <button class="numberButton" id="-" onclick="passMinus()">-</button>
                 <button class="numberButton" id="1">1</button>
                 <button class="numberButton" id="2">2</button>
                 <button class="numberButton" id="3">3</button>
-                <button class="numberButton" id="*">*</button>
+                <button class="numberButton" id="*" onclick="passMultiply()">*</button>
                 <button class="numberButton" id="0">0</button>
                 <button class="numberButton" id=".">.</button>
-                <button class="numberButton" id="=">=</button>
-                <button class="numberButton" id="/">/</button>
+                <button class="numberButton" id="=" onclick="doMath(event)">=</button>
+                <button class="numberButton" id="/" onclick="passDivide()">/</button>
             </div>
         </div>
 

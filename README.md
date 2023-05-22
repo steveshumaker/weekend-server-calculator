@@ -21,7 +21,9 @@ figure out displying the calculations to the DOM [x]
 figure out how to persist the page thru refresh [x]
 
 ------- STRETCH --------
-configure calculator layout []
-link the buttons to functions []
-more...
+have event listener for buttons [x]
+buttons generally work [x]
+need to figure out how to get numbers from the clicks when
+the number is greater than 1 char []
+
 
